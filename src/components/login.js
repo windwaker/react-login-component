@@ -3,7 +3,6 @@
 import React from 'react';
 import { Avatar, Button, Grid, Link, Paper, TextField, Typography } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import { green } from '@material-ui/core/colors';
 import { FormControlLabel } from '@material-ui/core';
 import { Checkbox } from '@material-ui/core';
 
