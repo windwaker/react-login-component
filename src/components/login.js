@@ -6,19 +6,20 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { FormControlLabel } from '@material-ui/core';
 import { Checkbox } from '@material-ui/core';
 
-const Login = () => {
+const Login = ({handleChange}) => {
 
-    const paperStyle = { padding: 20, height: '70vh', width: 280, margin: '20px auto' };
+    const paperStyle = { padding: 20, height: '73vh', width: 280, margin: '0 auto' };
     const avatarStyle = { backgroundColor: '#4ead4e' };
     const btnStyle = { margin: '8px 0' };
     const linkStyle = { margin: '0px 0px 0px 0px' };
+    const headerStyle = { margin: 0 };
 
     return (
         <Grid>
-            <Paper elevation={10} style={paperStyle}>
+            <Paper style={paperStyle}>
                 <Grid align="center">
                     <Avatar style={avatarStyle}> <LockOutlinedIcon /> </Avatar>
-                    <h2>Sign in</h2>
+                    <h2 style={headerStyle}>Sign in</h2>
                 </Grid>
                 <TextField label='Username' placeholder='Enter your username' fullWidth required></TextField>
                 <TextField label='Password' placeholder='Enter your password' type='password' fullWidth required></TextField>
@@ -30,7 +31,7 @@ const Login = () => {
                     </Link>
                 </Typography>
                 <Typography> Do you have an account?
-                    <Link href='#' style={linkStyle}>
+                    <Link href='#' style={linkStyle} onClick={()=>handleChange("event", 1)}>
                         Sign Up
                     </Link>
                 </Typography>
